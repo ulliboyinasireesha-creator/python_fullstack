@@ -19,8 +19,7 @@ else{
 for(let i=1; i<=5; i++){
     console.log("Iteration number: " + i)
 }
-const pi = 3.14
-console.log("value of pi is: " +  pi)
+export const pi = 3.14
 student = {
     name: "Sriram",
     age : 21,
