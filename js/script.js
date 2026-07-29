@@ -18,6 +18,13 @@ function changeHeading () {
     button.addEventListener("click",function(){
         alert("Welcome to Javascript Event Handling");
     });
+    let registerForm = document.getElementById("registerForm")
+    registerForm.addEventListener("submit",function(event){ 
+        event.preventDefault(); //prevent form submission
+        let name = document.getElementById("name").value
+        let email = document.getElementById("email").value
+        let password = document.getElementById("password").value
+    })
 
 
 
