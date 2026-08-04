@@ -50,4 +50,3 @@ function checkOddEven(num) {
 }
 console.log("check if 7 is odd or even: ", checkOddEven(7));
 
-
