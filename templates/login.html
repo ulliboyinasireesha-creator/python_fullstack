@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url for(static ,filename='css/style.css')}}"
+    <link rel="stylesheet" href="{{url_for('static' ,filename='css/style.css')}}"
 
   <title>Login Page</title>
 </head>
@@ -13,7 +13,7 @@
     <header>Login</header>
     <main>
         <h2>Student Login</h2>
-        <form id = "loginForm">
+        <form id = "LoginForm" method="POST">
             <label>Email</label><br>
             <input type="email" placeholder="Enter your Email" id="loginemail"><br>
             <label>Password</label><br>
