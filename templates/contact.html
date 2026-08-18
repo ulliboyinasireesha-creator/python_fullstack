@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<script src="{{url_for('static',filename='css/style.css')}}"
-
-     <title>Contact Page</title>
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
 </head>
 
 <body>
@@ -19,7 +18,8 @@
             <a href="/about">About</a>
             <a href="/courses">Courses</a>
             <a href="/trainers">Trainers</a>
-            {%  if session.get('user_email') %}
+            {% if session.get('user_email') %}
+            <a href="/tasks">My Tasks</a>
             <a href="/logout">Logout</a>
             {% else %}
             <a href="/register">Register</a>
@@ -38,7 +38,7 @@
 
             <p>Agiripalli, Andhra Pradesh</p>
 
-            <p>Email: siri@nriit.edu</p>
+            <p>Email: info@nriit.edu</p>
 
             <p>Phone: +91 9876543210</p>
 
@@ -49,7 +49,7 @@
 
             <audio controls>
 
-                <source src="audio/intro.mp3" type="audio/mpeg">
+                <source src="{{ url_for('static', filename='audio/intro.mp3') }}" type="audio/mpeg">
 
             </audio>
 
@@ -60,7 +60,7 @@
 
             <video width="500" controls>
 
-                <source src="video/intro.mp4" type="video/mp4">
+                <source src="{{ url_for('static', filename='video/intro.mp4') }}" type="video/mp4">
 
             </video>
 
@@ -92,7 +92,7 @@
 
         <p>&copy; 2026 NRIIT Learning Management System</p>
 
-        <p>Email: siri@nriit.edu</p>
+        <p>Email: info@nriit.edu</p>
 
         <p>Phone: +91 9876543210</p>
 
@@ -105,8 +105,7 @@
         <a href="#">LinkedIn</a>
 
     </footer>
-    <script src="{{url_for('static',filename='js/script.js')}}></script>
-
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
 </body>
 
 </html>
